@@ -4,7 +4,7 @@ interface HeaderProps {
 
 function Header({ title }: HeaderProps) {
   return (
-    <div className="w-full py-4 text-xl font-bold text-white bg-gradient-to-r from-[#8989E9] to-[#8989E9] shadow-lg text-center">
+    <div className="w-full py-4 text-xl font-bold text-white bg-gradient-to-r from-[#6A0DAD] to-[#6A0DAD] shadow-lg text-center">
       {title}
     </div>
   );

@@ -1,8 +1,9 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 @theme {
-	--color-button-blue-light: #8989E9
-	--color-button-blue-dark: #8989E9
+	--color-button-blue-light: #6A0DAD
+	--color-button-blue-dark: #6A0DAD
 }
 
 :root {
@@ -11,7 +12,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0, 0.87);
   background-color: #242424;
 
   font-synthesis: none;
@@ -22,11 +23,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 h1 {
@@ -41,27 +38,34 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+.cyberpunk-map {
+  filter: brightness(1.3) saturate(1.8) hue-rotate(270deg);
+}
+
+.vaporwave-map {
+  filter: hue-rotate(300deg) brightness(1.4) saturate(3);
+}
+
+@layer components {
+  .cyberpunk-map {
+    filter: brightness(1.3) saturate(1.8) hue-rotate(270deg);
+  }
+  .vaporwave-map {
+    filter: hue-rotate(300deg) brightness(1.4) saturate(3);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
   :root {
     color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    background-color: #000000;
   }
 }

@@ -9,7 +9,20 @@ const Button: React.FC<ButtonProps> = ({ to, children }) => {
   return (
     <Link
       to={to}
-      className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg shadow-sm transition duration-150"
+      className="
+        bg-[#6a1b9a]
+        hover:bg-[#4a148c]
+        text-white
+        px-6 py-3
+        rounded-md
+        shadow-md
+        text-base
+        font-medium
+        transition-all
+        duration-200
+        w-64
+        text-center
+      "
     >
       {children}
     </Link>
